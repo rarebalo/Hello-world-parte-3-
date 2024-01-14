@@ -4,5 +4,4 @@ const Saludo = (props) => {
     <h1>{props.saludoAmigo}</h1>
   </div>;
 };
-
 export default Saludo;
