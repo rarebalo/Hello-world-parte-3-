@@ -1,7 +1,11 @@
- 
-const Saludo = (props) => {
-  return <div>
-    <h1>{props.saludoAmigo}</h1>
-  </div>;
-};
+import React, { useState } from 'react';
+
+function Saludo(props) {
+  return (
+    <div>
+      Hello my friend {props.msj}!
+    </div>
+  );
+}
+
 export default Saludo;

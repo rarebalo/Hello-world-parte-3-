@@ -1,14 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Saludo from './components/Saludo'
-import Contador from './components/Contador';
+import React, { useState } from 'react';
+
 function App() {
+  const [msj, setMsj] = useState('');
+
+  const cambiaMensaje = () => {
+    setMsj('(from changed state)');
+  };
 
   return (
-    <>
-      <Saludo saludoAmigo="hello my friend!"/>
-      <Contador/>
-
-    </>
-  )
+    <div className="App">
+      <Saludo msj={msj} />
+      <button onClick={cambiaMensaje}>Click me</button>
+    </div>
+  );
 }
-export default App
+
+export default App;
